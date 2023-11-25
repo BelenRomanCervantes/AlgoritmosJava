@@ -9,7 +9,7 @@ public class Factorial {
             Integer a = i;
             }
         }
-        String resultado = "El factorial es: " + a;
+        String resultado = "El factorial es: ";
         System.out.println(resultado);
     }
 }
