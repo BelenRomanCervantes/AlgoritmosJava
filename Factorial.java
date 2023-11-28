@@ -4,12 +4,12 @@ public class Factorial {
         for(int i = 1; i == numero; i ++)
         {
             if(i == 1){
-            Integer x = i;
+            Integer x = 0;
             } else {
-            Integer a = i;
+            Integer a = 0;
             }
         }
-        String resultado = "El factorial es: ";
+        String resultado = "El factorial es: " ;
         System.out.println(resultado);
     }
 }
