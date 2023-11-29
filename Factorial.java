@@ -1,15 +1,29 @@
+import javax.swing.JOptionPane;
+
 public class Factorial {
     public static void main(String[] args) {
-        Integer numero = 8;
-        for(int i = 1; i == numero; i ++)
-        {
-            if(i == 1){
-            Integer x = 0;
-            } else {
-            Integer a = 0;
-            }
+
+        //Ventana de dialogo para recibir datos de entrada
+        String numStr = JOptionPane.showInputDialog(null, "Ingrese cualquier numero entero para conocer su factorial");
+        int numInt = 0;
+
+        //Prueba para marcar error en caso de recibir una entrada incorrecta
+        try {
+            numInt = Integer.parseInt(numStr);
+        } catch (NumberFormatException e){
+           JOptionPane.showMessageDialog(null, "Error: Debe ingresar un numero entero");
+            main(args);
+            System.exit(0);
         }
-        String resultado = "El factorial es: " ;
-        System.out.println(resultado);
+        
+        //Calculo del factorial
+        int fact = 1;
+        for(int i = 2; i <= numInt; i ++){
+            fact = fact * i;
+        }
+
+        //Ventana de dialogo del resultado
+        String resultado = "El factorial es: " + fact;
+        JOptionPane.showMessageDialog(null, resultado);
     }
 }
