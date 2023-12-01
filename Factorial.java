@@ -17,13 +17,18 @@ public class Factorial {
         }
         
         //Calculo del factorial
-        int fact = 1;
-        for(int i = 2; i <= numInt; i ++){
-            fact = fact * i;
+        if (numInt < 0) {
+            JOptionPane.showMessageDialog(null, "El numero es negativo y no se puede calcular su factorial");
+            main(args);
+            System.exit(0);
+        } else {        
+            int fact = 1;
+            for(int i = 2; i <= numInt; i ++){
+                fact *= i;
+                }
+            String resultado = "El factorial es: " + fact;
+            JOptionPane.showMessageDialog(null, resultado);
         }
 
-        //Ventana de dialogo del resultado
-        String resultado = "El factorial es: " + fact;
-        JOptionPane.showMessageDialog(null, resultado);
     }
 }
