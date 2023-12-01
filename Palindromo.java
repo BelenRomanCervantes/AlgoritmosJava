@@ -10,13 +10,15 @@ public class Palindromo {
         String cadena2 = cadena.trim();
 
         //Eliminacion de espacios intermedios
-        String cadena3 = 
+        
 
         //Eliminacion de caracteres especiales
 
         //Comparacion de la primera y ultima mitad
-        
-
+        String primeraMitad = cadena2.substring(0, (cadena2.length()/2)+1);
+        System.out.println(primeraMitad);
+        String ultimaMitad = cadena2.substring((cadena2.length()/2), cadena2.length());
+        System.out.println(ultimaMitad);
     }
     
 }
