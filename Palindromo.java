@@ -6,19 +6,21 @@ public class Palindromo {
         //Ventana de dialogo para solicitar la entrada de datos
         String cadena = JOptionPane.showInputDialog(null, "Introduzca una palabra o frase para saber si es un palindromo");
         
-        //Eliminacion de los espacios al inicio y final
-        String cadena2 = cadena.trim();
+        //Convertir en minusculas, eliminar espacios y algunos aracteres especiales
+        String cadenaLimpia = cadena.trim().toLowerCase().replace("á", "a").replace("é", "e").replace("í","i").replace("ó","o").replace("ú","u").replace(" ","").replace(".","");
 
-        //Eliminacion de espacios intermedios
+        //Invertir la cadena
+        String cadenaInvertida = new StringBuilder(cadenaLimpia).reverse().toString();
+                
+        //Mensaje de respuesta
+        if(cadenaInvertida.equals(cadenaLimpia)){
+            JOptionPane.showMessageDialog(null, "SI es un palindromo");
+        } else {
+            JOptionPane.showMessageDialog(null, "NO es un palindromo");
+        }
+
+
         
-
-        //Eliminacion de caracteres especiales
-
-        //Comparacion de la primera y ultima mitad
-        String primeraMitad = cadena2.substring(0, (cadena2.length()/2)+1);
-        System.out.println(primeraMitad);
-        String ultimaMitad = cadena2.substring((cadena2.length()/2), cadena2.length());
-        System.out.println(ultimaMitad);
+        
     }
-    
 }
