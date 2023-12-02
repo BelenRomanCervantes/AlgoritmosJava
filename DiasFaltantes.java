@@ -1,9 +1,11 @@
+import java.time.LocalDate;
+
 import javax.swing.JOptionPane;
 
 public class DiasFaltantes {
     public static void main(String[] args) {
         
-        //Ventana de dialogo para recibir datos de entrada
+        /*Ventana de dialogo para recibir datos de entrada
         String dActStr = JOptionPane.showInputDialog(null, "Ingrese el dia actual (DD)");
         int dAct = 0;
         try {
@@ -22,8 +24,18 @@ public class DiasFaltantes {
             main(args);
             System.exit(0);
         }
+        */
 
-        //Calculo de los dias faltantes ***Corregir: arroja negativos***
+        LocalDate fechaAct = LocalDate.now();
+        LocalDate diaMuertos = LocalDate.parse("Dia de muertos", formatter);
+        
+
+
+
+        /*Calculo de los dias faltantes ***Corregir: arroja negativos***
+        if(mAct >= 11){
+
+        }
         int diasHastaHoy = (mAct * 30) + (dAct * 1);
         int diasParaMuertos = 331 - diasHastaHoy;
         String resultadoMuertos = "Los dias que faltan hasta dia de muertos son: " + diasParaMuertos;
@@ -33,7 +45,7 @@ public class DiasFaltantes {
         //Ventana de dialogo de salida
         JOptionPane.showMessageDialog(null, resultadoMuertos);
         JOptionPane.showMessageDialog(null, resultadoNavidad);
-
+*/
 
 
     }
