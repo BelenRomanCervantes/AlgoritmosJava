@@ -19,7 +19,7 @@ public class OrdenarNumeros {
         try {
             num = Double.parseDouble(numStr);
         } catch (NumberFormatException e){
-           JOptionPane.showMessageDialog(null, "Error!\nUno de los elementos introducidos no fue un número\npor lo tanto el programa será reiniciado.\nPor favor introduzca puros NUMEROS.");
+           JOptionPane.showMessageDialog(null, "Error!\nUno de los elementos introducidos no fue un número\npor lo tanto el programa será REINICIADO.\nPor favor introduzca solo NUMEROS.");
             main(args);
             System.exit(0);
         }
