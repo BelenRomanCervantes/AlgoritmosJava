@@ -11,10 +11,15 @@ public class IncrementoSalarial {
         try {
             salActual = Double.parseDouble(salActualStr);
         } catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Error: Debe ingresar un numero");
+            JOptionPane.showMessageDialog(null, "Error!\nDebes ingresar un numero positivo.\nVuelve a intentar.");
             main(args);
             System.exit(0);
         }
+        if(salActual < 0){
+            JOptionPane.showMessageDialog(null, "Error!\nDebes ingresar un numero positivo.\nVuelve a intentar.");
+            main(args);
+            System.exit(0);
+        } else {
 
         //Calculo del incremento
         double salNuevo = 0.0;
@@ -28,5 +33,6 @@ public class IncrementoSalarial {
         String respuesta = "Tu salario actualizado es: " + salNuevo;
         JOptionPane.showMessageDialog(null, respuesta);
     }
+}
     
 }

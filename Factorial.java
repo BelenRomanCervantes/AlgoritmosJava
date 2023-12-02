@@ -4,21 +4,21 @@ public class Factorial {
     public static void main(String[] args) {
 
         //Ventana de dialogo para recibir datos de entrada
-        String numStr = JOptionPane.showInputDialog(null, "Ingrese cualquier numero entero para conocer su factorial");
+        String numStr = JOptionPane.showInputDialog(null, "Ingrese cualquier numero entero y positivo para conocer su factorial");
         int numInt = 0;
 
         //Prueba para marcar error en caso de recibir una entrada incorrecta
         try {
             numInt = Integer.parseInt(numStr);
         } catch (NumberFormatException e){
-           JOptionPane.showMessageDialog(null, "Error: Debe ingresar un numero entero");
+           JOptionPane.showMessageDialog(null, "Error:\nDebe ingresar un numero ENTERO y POSITIVO.\nVuelva a intentar");
             main(args);
             System.exit(0);
         }
         
         //Calculo del factorial
         if (numInt < 0) {
-            JOptionPane.showMessageDialog(null, "El numero es negativo y no se puede calcular su factorial");
+            JOptionPane.showMessageDialog(null, "Error!\nDebe ingresar un numero ENTERO y POSITIVO.\nVuelva a intentar.");
             main(args);
             System.exit(0);
         } else {        
