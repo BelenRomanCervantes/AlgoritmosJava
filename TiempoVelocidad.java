@@ -44,9 +44,10 @@ public class TiempoVelocidad {
                 
         //Calculo del tiempo
         double tiempo = distancia / velocidad;
+        double minutos = tiempo *60;
 
         //Mensaje de respuesta
-        String respuesta = "El tiempo que tardo en recorrer esa distancia fue de: " + tiempo + " horas";
+        String respuesta = "El tiempo que tardo en recorrer esa distancia fue de: " + minutos + " MINUTOS";
         JOptionPane.showMessageDialog(null, respuesta);
 
     }
